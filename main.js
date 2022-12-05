@@ -40,9 +40,10 @@ function draw() {
   board.piece.draw();
 }
  
-function play() {
+function playGame() {
   board = new Board(ctx); // resets board when new game starts
   addEventListener();
+  music();
 
   // cancel animation if game is running
   if (requestId) {
@@ -104,3 +105,14 @@ function updateAccount(key, value) {
     element.textContent = value;
   }
 }
+
+// create function to play background music
+function music() {
+  let audio = new Audio ("Tetris.mp3");
+  audio.play();
+  audio.loop = true;
+}
+
+// {/* <audio controls>
+//   <source src="Tetris.mp3" type="audio/mpeg" />
+// </audio> */}
