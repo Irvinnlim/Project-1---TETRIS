@@ -77,3 +77,11 @@ const moves = {
   [KEY.DOWN]:  (p) => ({ ...p, y: p.y + 1 }),
   [KEY.UP]:    (p) => board.rotate(p),
 };
+
+// set scoring system
+const POINTS = {
+  SINGLE: 40,
+  DOUBLE: 100,
+  TRIPLE: 300,
+  TETRIS: 1200
+}

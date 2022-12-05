@@ -61,10 +61,46 @@ function animate(now = 0) {
   if (time.elapsed > time.level) {
     // restart counting from now
     time.start = now;
-
-    board.drop();
+    // if valid move is false, call gameOver() and exit loop
+    if (board.drop() === false) { 
+      gameOver();
+      return;
+    };
   }
 
   draw();
   requestId = requestAnimationFrame(animate); // use requestAnimationFrame as it enables browser optimisation, handles frame rate
+}
+
+// create function to stop game and display GAME OVER
+function gameOver() {
+  cancelAnimationFrame(requestId);
+  ctx.fillStyle = 'black';
+  ctx.fillRect(1, 10, 8, 1.5);
+  ctx.font = '1px Bold Brush Script MT';
+  ctx.fillStyle = 'red';
+  ctx.fillText('GAME OVER!', 2, 11);
+}
+
+// set initial account values to 0
+let accountValues = {
+  score: 0,
+  lines: 0,
+}
+
+// create proxy object to update display
+let account = new Proxy(accountValues, {
+  set: (target, key, value) => {
+    target[key] = value;
+    updateAccount(key, value);
+    return true;
+  }
+})
+
+// create function to update game score
+function updateAccount(key, value) {
+  let element = document.getElementById(key); // key = score
+  if (element) {
+    element.textContent = value;
+  }
 }

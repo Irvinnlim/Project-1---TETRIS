@@ -32,16 +32,20 @@ class Board {
     return p;  
   }
   
+  // create function to check tetromino piece move is valid
   valid(p) {
+    // check every row and value of the grid
     return p.shape.every((row, dy) => {
       return row.every((value, dx) => {
-        let x = p.x + dx;
-        let y = p.y + dy;
+        let x = p.x + dx; // x coordinate of board grid
+        let y = p.y + dy; // y coordinate of board grid
+        // value = 0 is valid square or next grid move tetromino is inside the board and the grid is not occupied
         return value === 0 || (this.isInsideBoard(x, y) && this.isNotOccupied(x, y));
       });
     });
   }
 
+  // create function to check if board grid is occupied
   isNotOccupied(x, y) {
     return this.grid[y] && this.grid[y][x] === 0;
   }
@@ -65,11 +69,17 @@ class Board {
     if (this.valid(p)) {
       this.piece.move(p);
     } else {
-      this.freeze();
+      this.freeze(); // merge piece to board if it has no more valid moves
+      this.clearLines(); // clear row if piece fixed and row is filled
+      if ( this.piece.y === 0) { // check if piece is on row zero when tetromino piece is freezed, if so GAME OVER
+        return false;
+      }
       this.piece = new Piece(this.ctx);
-    } 
+    }
+    return true; 
   }
 
+  // create function to merge tetromino piece to the board when it has no more down moves
   freeze() {  
     this.piece.shape.forEach((row, y) => {  
       row.forEach((value, x) => {  
@@ -80,6 +90,7 @@ class Board {
    });  
   }
 
+  // create function to draw when tetromino piece is fixed onto the board, change color to grey
   draw() {  
     this.grid.forEach((row, y) => {  
       row.forEach((value, x) => {  
@@ -89,5 +100,36 @@ class Board {
         }  
       });  
     });  
+  }
+
+  // create function to clear line when row is filled
+  clearLines() {
+    let lines = 0;
+    this.grid.forEach((row,y) => {
+      // check for full row if every value is greater zero
+      if (row.every(value => value > 0)) {
+        // increase for cleared line
+        lines++; 
+        // if row is full, remove the row
+        this.grid.splice(y, 1);
+        // add zero-filled row at the top
+        this.grid.unshift(Array(COLUMNS).fill(0));
+      };
+    });
+    if (lines > 0) {
+      // aadd points if lines cleared
+      account.score += this.lineClearPoints(lines);
+      account.lines += lines;
+    }
+
+  }
+
+  // create function to award points for cleared lines
+  lineClearPoints(lines) {
+    return lines === 1 ? POINTS.SINGLE :
+           lines === 2 ? POINTS.DOUBLE :
+           lines === 3 ? POINTS.TRIPLE :
+           lines === 4 ? POINTS.TETRIS :
+           0;
   }
 }
