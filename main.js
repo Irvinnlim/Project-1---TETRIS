@@ -44,7 +44,6 @@ function playGame() {
   board = new Board(ctx); // resets board when new game starts
   addEventListener();
   music();
-
   // cancel animation if game is running
   if (requestId) {
     cancelAnimationFrame(requestId);
@@ -58,10 +57,11 @@ let time = { start: 0, elapsed: 0, level: 1000 };
 function animate(now = 0) {
   // update elapsed time
   time.elapsed = now - time.start;
-  // ff elapsed time has passed time for current level
+  // if elapsed time has passed time for current level
   if (time.elapsed > time.level) {
     // restart counting from now
     time.start = now;
+    
     // if valid move is false, call gameOver() and exit loop
     if (board.drop() === false) { 
       gameOver();
@@ -109,10 +109,6 @@ function updateAccount(key, value) {
 // create function to play background music
 function music() {
   let audio = new Audio ("Tetris.mp3");
-  audio.play();
-  audio.loop = true;
+    audio.play();
+    audio.loop = true;
 }
-
-// {/* <audio controls>
-//   <source src="Tetris.mp3" type="audio/mpeg" />
-// </audio> */}
