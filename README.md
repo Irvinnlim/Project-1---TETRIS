@@ -5,11 +5,11 @@ This is a classic game of TETRIS with the aim of clearing as many lines of tetri
 The game comprises a 20 by 10 board. When game is initiated, random tetromino blocks (I,J,L,O,S,T,Z) will appear and they will automatically descend. You are allowed to move/ rotate the tetromino blocks if the move is valid. Your aim is to clear as many rows as possible to attain as many points as possible.
 
 ## Gameplay
-To begin, click on the "Play" buttom
-Press the LEFT arrow key to move the tetromino to the left
-Press the RIGHT arrow key to move the tetromino to the right
-Press the UP arrow key to rotate the tetromino
-Press the DOWN KEY to move the tetromino downwards 
+To begin, click on the "Play" button.
+Press the LEFT arrow key to move the tetromino to the left.
+Press the RIGHT arrow key to move the tetromino to the right.
+Press the UP arrow key to rotate the tetromino.
+Press the DOWN KEY to move the tetromino downwards.
 
 ## Scoring System
 Scores are awarded based on the number of lines cleared per time;
