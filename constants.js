@@ -85,3 +85,9 @@ const POINTS = {
   TRIPLE: 300,
   TETRIS: 1200
 }
+
+// set gamePlay music
+const audio = new Audio ("Tetris.mp3");
+
+// set gameOver music
+const endAudio = new Audio ("game-over.mp3");

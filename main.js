@@ -40,9 +40,12 @@ function draw() {
   board.piece.draw();
 }
  
+
+
 function playGame() {
   board = new Board(ctx); // resets board when new game starts
   addEventListener();
+  musicStop();
   music();
   // cancel animation if game is running
   if (requestId) {
@@ -81,6 +84,8 @@ function gameOver() {
   ctx.font = '1px Bold Brush Script MT';
   ctx.fillStyle = 'red';
   ctx.fillText('GAME OVER!', 2, 11);
+  musicStop();
+  musicGameOver();
 }
 
 // set initial account values to 0
@@ -108,7 +113,16 @@ function updateAccount(key, value) {
 
 // create function to play background music
 function music() {
-  let audio = new Audio ("Tetris.mp3");
     audio.play();
     audio.loop = true;
 }
+
+function musicStop() {
+  audio.pause();
+  audio.currentTime = 0;
+}
+
+function musicGameOver() {
+  endAudio.play();
+}
+
