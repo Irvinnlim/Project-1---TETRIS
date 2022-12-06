@@ -51,7 +51,7 @@ const COLORS = [
   '#00FFFF',
   '#0000FF',
   '#FFA500',
-  '#FFFF00',
+  '#F7DF1E',
   '#00FF00',
   '#A020F0',
   '#FF0000'
