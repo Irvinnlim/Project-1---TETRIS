@@ -1,5 +1,5 @@
 ## Project Title
-This is a classic game of TETRIS with the aim of clearing as many lines of tetris blocks as possible
+This is a classic game of TETRIS with the aim of clearing as many lines of tetris blocks as possible.
 
 ## Features of Game
 The game comprises a 20 by 10 board. When game is initiated, random tetromino blocks (I,J,L,O,S,T,Z) will appear and they will automatically descend. You are allowed to move/ rotate the tetromino blocks if the move is valid. Your aim is to clear as many rows as possible to attain as many points as possible.
