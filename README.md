@@ -14,10 +14,10 @@ Press the DOWN KEY to move the tetromino downwards.
 ## Scoring System
 Scores are awarded based on the number of lines cleared per time;
 
-SINGLE       : 40
-DOUBLE       : 100
-TRIPLE       : 300
-TETRIS(QUAD) : 1200
+SINGLE       : 40,
+DOUBLE       : 100,
+TRIPLE       : 300,
+TETRIS(QUAD) : 1200,
 
 ######
 
