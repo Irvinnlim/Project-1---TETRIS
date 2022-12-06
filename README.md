@@ -17,7 +17,7 @@ Scores are awarded based on the number of lines cleared per time;
 SINGLE       : 40,
 DOUBLE       : 100,
 TRIPLE       : 300,
-TETRIS(QUAD) : 1200,
+TETRIS(QUAD) : 1200
 
 ######
 
