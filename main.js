@@ -80,10 +80,10 @@ function animate(now = 0) {
 function gameOver() {
   cancelAnimationFrame(requestId);
   ctx.fillStyle = 'black';
-  ctx.fillRect(1, 10, 8, 1.5);
+  ctx.fillRect(1, 8, 8, 1.5);
   ctx.font = '1px Bold Brush Script MT';
   ctx.fillStyle = 'red';
-  ctx.fillText('GAME OVER!', 2, 11);
+  ctx.fillText('GAME OVER!', 2, 9);
   musicStop();
   musicGameOver();
 }

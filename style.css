@@ -1,25 +1,55 @@
 * {
   font-family: 'Press Start 2P', cursive;
+  color: black;
+  text-shadow: 0 0 7px whitesmoke,
+  0 0 10px whitesmoke,
+  0 0 21px whitesmoke,
+  0 0 42px #0fa,
+  0 0 82px #0fa,
+  0 0 92px #0fa,
+  0 0 102px #0fa,
+  0 0 151px #0fa;
+}
+
+h1, p {
+  color: black;
+  text-shadow: 0 0 7px whitesmoke,
+  0 0 10px whitesmoke,
+  0 0 21px whitesmoke,
+  0 0 42px #0fa,
+  0 0 82px #0fa,
+  0 0 92px #0fa,
+  0 0 102px #0fa,
+  0 0 151px #0fa;
+}
+
+body {
+  background-image: url("tetris-beat-apple-arcade.jpg");
+  background-size: cover;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 320px 200px;
+  display: flex;
+  margin-top: 15%;
+  justify-content: center;
 }
 
 .right-column {
   display: flex;
+  margin-left: 1%;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .game-board {
-  border: solid 2px;
+  border: solid 2px black;
+  background-color: whitesmoke;
 }
 
 .play-button {
   background-color: #4caf50;
-  font-size: 16px;
+  border: solid 2px black;
+  font-size: 18px;
   padding: 15px 30px;
   cursor: pointer;
 }
