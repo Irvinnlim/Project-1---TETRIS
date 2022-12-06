@@ -21,6 +21,12 @@ TETRIS(QUAD) : 1200
 
 ######
 
+## MVP
+A single player web-based TETRIS game that (1) randomly spawns a tetromino block, (2) tetromino block moves down automatically, (3) move/rotate using keyCode, (4) scoring system.
+
+## Future Features
+(1) Display next tetromino block to be spawned, (2) level up, (3) rate of descend increases with each level.
+
 ## Motivations for Creating the Game
 This is my first javascript project. As I embarked on this project as part of my Software Engineering Immersive programme with General Assembly, I wanted to test myself to build a game that requires translation, keycode controls, functions, callbacks and DOM manipulation. TETRIS ticked all the boxes. 
 
