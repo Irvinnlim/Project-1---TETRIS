@@ -11,6 +11,9 @@ Press the RIGHT arrow key to move the tetromino to the right.
 Press the UP arrow key to rotate the tetromino.
 Press the DOWN KEY to move the tetromino downwards.
 
+### Visualising Tetromino Blocks' Rotations
+![rotations](https://user-images.githubusercontent.com/110525418/206441031-652a646b-a190-4fc9-b499-c93c2c5f2fcb.png)
+
 ## Scoring System
 Scores are awarded based on the number of lines cleared per time;
 
@@ -22,7 +25,19 @@ TETRIS(QUAD) : 1200
 ######
 
 ## MVP
-A single player web-based TETRIS game that (1) randomly spawns a tetromino block, (2) tetromino block moves down automatically, (3) move/rotate using keyCode, (4) scoring system.
+A single player web-based TETRIS game with (1) randomly spawned tetromino block, (2) automatic descend of tetromino block, (3) move/rotate using keyCode, (4) scoring system, (5) game over feature.
+
+### User Interface
+![UI](https://user-images.githubusercontent.com/110525418/206442362-4c946f12-80b0-4345-a9be-9ebccb35316c.png)
+
+### Spawning of Random Tetromino Blocks
+![startgame](https://user-images.githubusercontent.com/110525418/206442612-332317bc-7548-45be-a2b7-f60a05ffb870.png)
+
+### During Game
+![gameplay](https://user-images.githubusercontent.com/110525418/206446693-ee859038-dd72-4872-8ead-f642b75709bb.png)
+
+### Game Over
+![gameover](https://user-images.githubusercontent.com/110525418/206446617-95fb5630-dcea-461d-9cbc-22fcd454eb00.png)
 
 ## Future Features
 (1) Display next tetromino block to be spawned, (2) level up, (3) rate of descend increases with each level.
