@@ -87,7 +87,7 @@ const POINTS = {
 }
 
 // set gamePlay music
-const audio = new Audio ("Tetris.mp3");
+const audio = new Audio ("./music/Tetris.mp3");
 
 // set gameOver music
-const endAudio = new Audio ("game-over.mp3");
+const endAudio = new Audio ("./music/game-over.mp3");
