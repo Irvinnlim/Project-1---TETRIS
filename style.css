@@ -24,13 +24,15 @@ h1, p {
 }
 
 body {
-  background-image: url("tetris-beat-apple-arcade.jpg");
+  background-image: url('anime_beach_background.jpeg');
   background-size: cover;
+  background-color: grey;
+  background-blend-mode: multiply;
 }
 
 .grid {
   display: flex;
-  margin-top: 15%;
+  margin-top: 12%;
   justify-content: center;
 }
 
