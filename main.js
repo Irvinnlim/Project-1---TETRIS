@@ -40,8 +40,6 @@ function draw() {
   board.piece.draw();
 }
  
-
-
 function playGame() {
   board = new Board(ctx); // resets board when new game starts
   addEventListener();
@@ -53,6 +51,22 @@ function playGame() {
   }
   time.start = performance.now(); // returns time in miliseconds
   animate();
+  disableButton();
+}
+
+// create function to disable 'Play' button to prevent multiple clicks
+function disableButton() {
+  let disableBtn = document.querySelector('.play-button');
+  
+  disableBtn.disabled = true;
+  disableBtn.style.backgroundColor = '#808080';
+  disableBtn.style.color = '#808080';
+  disableBtn.style.cursor = 'auto'
+}
+
+// create function to reset game when 'Reset' clicked
+function resetGame() {
+  document.location.reload();
 }
 
 let time = { start: 0, elapsed: 0, level: 1000 };

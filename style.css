@@ -52,4 +52,13 @@ body {
   font-size: 18px;
   padding: 15px 30px;
   cursor: pointer;
+  margin-bottom: -200px;
+}
+
+.reset-button {
+  background-color: #dde021;
+  border: solid 2px black;
+  font-size: 18px;
+  padding: 15px 30px;
+  cursor: pointer;
 }
