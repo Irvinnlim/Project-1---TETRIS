@@ -59,16 +59,22 @@ body {
 
 @media screen and (max-width: 480px) {
   body { 
-    background: url('anime_beach_background.jpeg') no-repeat center center fixed; 
+    background: url('anime_beach_background.jpeg') no-repeat center center fixed;
+    background-color: grey;
+    background-blend-mode: multiply; 
   }
 }
 @media screen and (min-width: 481px) and (max-width: 900px) {
   body {
-    background: url('anime_beach_background.jpeg') no-repeat center center fixed; 
+    background: url('anime_beach_background.jpeg') no-repeat center center fixed;
+    background-color: grey;
+    background-blend-mode: multiply; 
   }
 }
 @media screen and (min-width: 901px) {
   body {
     background: url('anime_beach_background.jpeg') no-repeat center center fixed; 
+    background-color: grey;
+    background-blend-mode: multiply; 
   }
 }
