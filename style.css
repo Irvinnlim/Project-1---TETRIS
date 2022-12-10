@@ -25,6 +25,7 @@ h1, p {
 
 body {
   background-image: url('anime_beach_background.jpeg');
+  background-repeat: no-repeat;
   background-size: cover;
   background-color: grey;
   background-blend-mode: multiply;
@@ -54,4 +55,20 @@ body {
   font-size: 18px;
   padding: 15px 30px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  body { 
+    background: url('anime_beach_background.jpeg') no-repeat center center fixed; 
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 900px) {
+  body {
+    background: url('anime_beach_background.jpeg') no-repeat center center fixed; 
+  }
+}
+@media screen and (min-width: 901px) {
+  body {
+    background: url('anime_beach_background.jpeg') no-repeat center center fixed; 
+  }
 }

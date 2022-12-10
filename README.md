@@ -28,16 +28,16 @@ TETRIS(QUAD) : 1200
 A single player web-based TETRIS game with (1) randomly spawned tetromino block, (2) automatic descend of tetromino block, (3) move/rotate using keyCode, (4) scoring system, (5) game over feature.
 
 ### User Interface
-![UI](https://user-images.githubusercontent.com/110525418/206442362-4c946f12-80b0-4345-a9be-9ebccb35316c.png)
+![UI](https://user-images.githubusercontent.com/110525418/206838386-0d042035-1fe0-430c-81e2-5e7561437a78.png)
 
 ### Spawning of Random Tetromino Blocks
-![startgame](https://user-images.githubusercontent.com/110525418/206442612-332317bc-7548-45be-a2b7-f60a05ffb870.png)
+![spawn](https://user-images.githubusercontent.com/110525418/206838404-65618b9f-f5f7-4abe-a3e5-76d82b1c6f59.png)
 
 ### During Game
-![gameplay](https://user-images.githubusercontent.com/110525418/206446693-ee859038-dd72-4872-8ead-f642b75709bb.png)
+![gameplay](https://user-images.githubusercontent.com/110525418/206838432-17c8ed3d-6dbb-4fa6-926b-0236f30a69ac.png)
 
 ### Game Over
-![gameover](https://user-images.githubusercontent.com/110525418/206446617-95fb5630-dcea-461d-9cbc-22fcd454eb00.png)
+![gameover](https://user-images.githubusercontent.com/110525418/206838443-36199613-12ce-4daf-ad36-340a30c06739.png)
 
 ## Future Features
 (1) Display next tetromino block to be spawned, (2) level up, (3) rate of descend increases with each level.
@@ -48,8 +48,10 @@ This is my first javascript project. As I embarked on this project as part of my
 Furthermore, TETRIS is a classic game that my Fiancee loves and hence, it gives me great joy to make this game for her.
 
 ## Technologies
-- HTML, CSS & Javascript
-- HTML canvas for graphics
+- HTML
+- HTML Canvas
+- Javascript
+- CSS
 
 ## About Me
 I am an aspiring software developer and I aim to continualy hone my programming skills inorder to write programs that bring convenience and joy to the everyday life. My GitHub profile can be accessed via https://github.com/Irvinnlim
