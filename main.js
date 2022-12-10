@@ -12,6 +12,29 @@ let requestId = null;
 
 let board = new Board(ctx);
 
+// set initial account values to 0
+let accountValues = {
+  score: 0,
+  lines: 0,
+}
+
+// create proxy object to update display
+let account = new Proxy(accountValues, {
+  set: (target, key, value) => {
+    target[key] = value;
+    updateAccount(key, value);
+    return true;
+  }
+})
+
+// create function to update game score
+function updateAccount(key, value) {
+  let element = document.getElementById(key); // key = score
+  if (element) {
+    element.textContent = value;
+  }
+}
+
 // create function to move tetromino piece when key is pressed
 function handleKeyPress(event) {
   // stop the event from bubbling 
@@ -39,9 +62,16 @@ function draw() {
   board.draw();
   board.piece.draw();
 }
- 
+
+// create function to reset game
+function resetGame() {
+  account.score = 0;
+  account.lines = 0;
+  board = new Board(ctx);
+}
+
 function playGame() {
-  board = new Board(ctx); // resets board when new game starts
+  resetGame(); // resets board when new game starts
   addEventListener();
   musicStop();
   music();
@@ -51,22 +81,6 @@ function playGame() {
   }
   time.start = performance.now(); // returns time in miliseconds
   animate();
-  disableButton();
-}
-
-// create function to disable 'Play' button to prevent multiple clicks
-function disableButton() {
-  let disableBtn = document.querySelector('.play-button');
-  
-  disableBtn.disabled = true;
-  disableBtn.style.backgroundColor = '#808080';
-  disableBtn.style.color = '#808080';
-  disableBtn.style.cursor = 'auto'
-}
-
-// create function to reset game when 'Reset' clicked
-function resetGame() {
-  document.location.reload();
 }
 
 let time = { start: 0, elapsed: 0, level: 1000 };
@@ -100,29 +114,6 @@ function gameOver() {
   ctx.fillText('GAME OVER!', 2, 9);
   musicStop();
   musicGameOver();
-}
-
-// set initial account values to 0
-let accountValues = {
-  score: 0,
-  lines: 0,
-}
-
-// create proxy object to update display
-let account = new Proxy(accountValues, {
-  set: (target, key, value) => {
-    target[key] = value;
-    updateAccount(key, value);
-    return true;
-  }
-})
-
-// create function to update game score
-function updateAccount(key, value) {
-  let element = document.getElementById(key); // key = score
-  if (element) {
-    element.textContent = value;
-  }
 }
 
 // create function to play background music
