@@ -81,7 +81,7 @@ function gameOver() {
   cancelAnimationFrame(requestId);
   ctx.fillStyle = 'black';
   ctx.fillRect(1, 8, 8, 1.5);
-  ctx.font = '1px Bold Brush Script MT';
+  ctx.font = `0.5pt 'Press Start 2P', cursive`;
   ctx.fillStyle = 'red';
   ctx.fillText('GAME OVER!', 2, 9);
   musicStop();
