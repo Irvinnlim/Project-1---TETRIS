@@ -48,8 +48,10 @@ This is my first javascript project. As I embarked on this project as part of my
 Furthermore, TETRIS is a classic game that my Fiancee loves and hence, it gives me great joy to make this game for her.
 
 ## Technologies
-- HTML, CSS & Javascript
-- HTML canvas for graphics
+- HTML
+- HTML Canvas
+- Javascript
+- CSS
 
 ## About Me
 I am an aspiring software developer and I aim to continualy hone my programming skills inorder to write programs that bring convenience and joy to the everyday life. My GitHub profile can be accessed via https://github.com/Irvinnlim
