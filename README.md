@@ -53,5 +53,8 @@ Furthermore, TETRIS is a classic game that my Fiancee loves and hence, it gives 
 - Javascript
 - CSS
 
+## Installation
+Click https://irvinnlim.github.io/Project-1---TETRIS/ to play.
+
 ## About Me
 I am an aspiring software developer and I aim to continualy hone my programming skills inorder to write programs that bring convenience and joy to the everyday life. My GitHub profile can be accessed via https://github.com/Irvinnlim
